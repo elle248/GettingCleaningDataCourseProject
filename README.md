@@ -18,9 +18,13 @@ This file indicates all the variables and summaries calculated, along with units
 This file contains the R code which needs to be run on the raw data in order to produce the cleansed dataset found in the TidyData.txt file. The steps performed on the raw data within the run_analysis.R file are as follows:
 
 STEP 1: Merges the training and the test sets to create one data set
+
 STEP 2: Extracts only the measurements on the mean and standard deviation for each measurement
+
 STEP 3: Uses descriptive activity names to name the activities in the data set
+
 STEP 4: Appropriately labels the data set with descriptive variable names
+
 STEP 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
 ###TidyData.txt
