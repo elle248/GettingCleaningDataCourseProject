@@ -11,17 +11,20 @@ The TidyData.txt file uses only the mean and standard deviation portions of the 
 
 ###Subject
 Type: Integer
+Units: None
 This field uses an ID to anonymously specify the person involved in each sample.
 The range of this field is from 1-30, since 30 people took part in collecting the data for this study.
 
 ###Activity
 Type: String
+Units: None
 This is the activity Label, which describes the activity that the person in the study was undertaking.
 Possible values of this field are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
 
 ###Features
 Type: String
-There are a number of different columns (column 3 onwards in the TidyData.txt file) relating to different features from the study. These various column names can be broken down into 4 parts of the follwoing form:
+Units: normalised and bounded within [-1,1]
+There are a number of different columns (column 3 onwards in the TidyData.txt file) relating to different features from the study. These various column names can be broken down into 5 parts of the follwoing form:
 
 <"t"/"f"><"body"/"Gravity"><"Acc"/"AccJerk"/"AccMag"/"Gyro"/"GyroJerk"/"GyroMag">-<"mean()"/"std()"><"X"/"Y"/"Z">
 
@@ -43,4 +46,80 @@ Value "Body or "Gravity"
 "AccMag": the magnitude of the three-dimensional accelerometer signals (calculated using the Euclidean Norm)
 "GyroMag": the magnitude of the three-dimensional gyroscope signals (calculated using the Euclidean Norm)
 
+####PART 4
+"mean()": the mean value of the signal
+"std()": the standard deviation of the signal
+
+####PART 5
+"X", "Y" and "Z" values suffixed to the feature names denote the 3-axial signals in the X, Y and Z directions.
+
+The complete list of variable names using this notation in the TidyData.txt file are:
+tBodyAcc-mean()-X
+tBodyAcc-mean()-Y
+tBodyAcc-mean()-Z
+tBodyAcc-std()-X
+tBodyAcc-std()-Y
+tBodyAcc-std()-Z
+tGravityAcc-mean()-X
+tGravityAcc-mean()-Y
+tGravityAcc-mean()-Z
+tGravityAcc-std()-X
+tGravityAcc-std()-Y
+tGravityAcc-std()-Z
+tBodyAccJerk-mean()-X
+tBodyAccJerk-mean()-Y
+tBodyAccJerk-mean()-Z
+tBodyAccJerk-std()-X
+tBodyAccJerk-std()-Y
+tBodyAccJerk-std()-Z
+tBodyGyro-mean()-X
+tBodyGyro-mean()-Y
+tBodyGyro-mean()-Z
+tBodyGyro-std()-X
+tBodyGyro-std()-Y
+tBodyGyro-std()-Z
+tBodyGyroJerk-mean()-X
+tBodyGyroJerk-mean()-Y
+tBodyGyroJerk-mean()-Z
+tBodyGyroJerk-std()-X
+tBodyGyroJerk-std()-Y
+tBodyGyroJerk-std()-Z
+tBodyAccMag-mean()
+tBodyAccMag-std()
+tGravityAccMag-mean()
+tGravityAccMag-std()
+tBodyAccJerkMag-mean()
+tBodyAccJerkMag-std()
+tBodyGyroMag-mean()
+tBodyGyroMag-std()
+tBodyGyroJerkMag-mean()
+tBodyGyroJerkMag-std()
+fBodyAcc-mean()-X
+fBodyAcc-mean()-Y
+fBodyAcc-mean()-Z
+fBodyAcc-std()-X
+fBodyAcc-std()-Y
+fBodyAcc-std()-Z
+fBodyAccJerk-mean()-X
+fBodyAccJerk-mean()-Y
+fBodyAccJerk-mean()-Z
+fBodyAccJerk-std()-X
+fBodyAccJerk-std()-Y
+fBodyAccJerk-std()-Z
+fBodyGyro-mean()-X
+fBodyGyro-mean()-Y
+fBodyGyro-mean()-Z
+fBodyGyro-std()-X
+fBodyGyro-std()-Y
+fBodyGyro-std()-Z
+fBodyAccMag-mean()
+fBodyAccMag-std()
+fBodyBodyAccJerkMag-mean()
+fBodyBodyAccJerkMag-std()
+fBodyBodyGyroMag-mean()
+fBodyBodyGyroMag-std()
+fBodyBodyGyroJerkMag-mean()
+fBodyBodyGyroJerkMag-std()
+
 ##Summaries
+All of the values found in the  TidyData.txt file are mean average values obtained from the raw data. The values are the mean values for each of the 30 subjects covering each of the 6 activities (i.e. 180 combinations altogether -> 180 orws of data in the file)
