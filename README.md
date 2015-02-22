@@ -27,8 +27,6 @@ STEP 4: Appropriately labels the data set with descriptive variable names
 
 STEP 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
-###TidyData.txt
-This file contains the output of the run_analysis.R file. It is a space delimited header file containing the cleansed Samsung Galaxy S data, including the subject (person) involved for each of the measurements, the activity which they were undertaking (walking, walking upstairs etc.) and the mean and standard deviation measurements for the accelerometer and gyroscope. As expected for tidy data, each variable measured is in one column and each observation of that variable is in a different row.
 
 ##Dependencies
 The run_analysis.R file assumes that the raw data is available and unzipped within the users working directory (as specified in the course project instructions). If this data is not yet available in your working directory, please download it from the link below and unzip the files to your working directory:
