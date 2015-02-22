@@ -19,4 +19,28 @@ Type: String
 This is the activity Label, which describes the activity that the person in the study was undertaking.
 Possible values of this field are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
 
+###Features
+Type: String
+There are a number of different columns (column 3 onwards in the TidyData.txt file) relating to different features from the study. These various column names can be broken down into 4 parts of the follwoing form:
+
+<"t"/"f"><"body"/"Gravity"><"Acc"/"AccJerk"/"AccMag"/"Gyro"/"GyroJerk"/"GyroMag">-<"mean()"/"std()"><"X"/"Y"/"Z">
+
+Each of these parts can be interpreted as follows:
+
+####PART 1
+Value "t" or "f". "t" corresponds to measurements derived in time. "f" corresponds to measurements for which a Fast Fourier Transform (FFT) has been applied.
+
+####PART 2
+Value "Body or "Gravity"
+"Body": the body component of the 3 axial raw signal from the accelerometer/gyroscope
+"Gravity": the gravity component of the 3 axial raw signal from the accelerometer/gyroscope
+
+####PART 3
+"Acc": 3 axial raw signal from the accelerometer
+"Gyro": 3 axial raw signal from the gyroscope
+"AccJerk": Jerk signal from the accelerometer, derived from the body linear acceleration and angular velocity
+"GyroJerk": Jerk signal from the gyroscope, derived from the body linear acceleration and angular velocity
+"AccMag": the magnitude of the three-dimensional accelerometer signals (calculated using the Euclidean Norm)
+"GyroMag": the magnitude of the three-dimensional gyroscope signals (calculated using the Euclidean Norm)
+
 ##Summaries
