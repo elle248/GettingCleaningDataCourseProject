@@ -5,7 +5,18 @@ This is the codebook for the TidyData.txt file. The data within this file was cr
 >
 >The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width >sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and >body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational >force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each >window, a vector of features was obtained by calculating variables from the time and frequency domain."
 
+The TidyData.txt file uses only the mean and standard deviation portions of the original data, averaged over the subject of the study and the activity which they were performing. More information can be found on this in the next sections.
+
 ##Variable definitions
 
+###Subject
+Type: Integer
+This field uses an ID to anonymously specify the person involved in each sample.
+The range of this field is from 1-30, since 30 people took part in collecting the data for this study.
+
+###Activity
+Type: String
+This is the activity Label, which describes the activity that the person in the study was undertaking.
+Possible values of this field are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
 
 ##Summaries
